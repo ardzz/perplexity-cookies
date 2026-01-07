@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perplexity Cookie Extractor</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🔐</div>
+      <h1>Perplexity Cookies</h1>
+    </div>
+    
+    <div class="status-container">
+      <div id="status" class="status idle">
+        <span class="status-icon">⏳</span>
+        <span class="status-text">Ready to extract</span>
+      </div>
+    </div>
+
+    <div class="config-section">
+      <label for="backendUrl">Backend URL:</label>
+      <input type="text" id="backendUrl" value="http://localhost:8000" placeholder="http://localhost:8000">
+    </div>
+
+    <div class="cookies-preview" id="cookiesPreview">
+      <div class="preview-placeholder">Click "Extract Cookies" to view</div>
+    </div>
+
+    <div class="actions">
+      <button id="extractBtn" class="btn btn-primary">
+        <span class="btn-icon">🍪</span>
+        Extract Cookies
+      </button>
+      <button id="sendBtn" class="btn btn-success" disabled>
+        <span class="btn-icon">📤</span>
+        Update .env
+      </button>
+    </div>
+
+    <div class="footer">
+      <small>Make sure you're logged into <a href="https://perplexity.ai" target="_blank">perplexity.ai</a></small>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
